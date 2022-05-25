@@ -48,15 +48,12 @@ function App() {
 
   return (
     <div className='container'>
+      <Header
+        onAdd={() => setShowAddTask(!showAddTask)}
+        showAdd={showAddTask}
+      />
 
-      {/* Once the Add button from Header is clicked,
-      it should change the ShowAddTask state as declared at Line 9 */}
-      <Header onAdd={() => setShowAddTask(!showAddTask)} />
-
-      {/* Once the state is the opposite of its stored boolean value, if it
-      is true, it will then toggle display the AddTask component. */}
       {showAddTask && <AddTask onAdd={addTask} />}
-
       {tasks.length > 0 ?
         <Tasks
           tasks={tasks}

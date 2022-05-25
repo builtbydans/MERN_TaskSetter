@@ -9,9 +9,6 @@ const Header = ({ title, onAdd, showAdd }) => {
       <Button
           color={showAdd ? 'red' : 'green'}
           text={showAdd ? 'Close' : 'Add'}
-
-          /* This is the onClick handler passing the onAdd prop back
-          to App.js */
           onClick={onAdd}
       />
     </header>
